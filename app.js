@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express();
 const dotenv = require('dotenv');
+dotenv.config()
+
 const connectDB = require('./dbConfig');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -15,7 +17,6 @@ const prt = process.env.server_prt || 6969
 
 
 
-dotenv.config()
 
 
 app.use(express.json())
